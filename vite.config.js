@@ -10,4 +10,22 @@ export default defineConfig({
       replacement: path.resolve('src') + '/'
     }],
   },
+  css: {
+    modules: {
+      scopeBehaviour: "local",
+      globalModulePaths: [],
+      generateScopedName: undefined,
+      hashPrefix: "",
+      localsConvention: "camelCaseOnly",
+    },
+    preprocessorOptions: {
+      scss: {
+        additionalData: `
+          @use '@/styles/helpers' as *;
+        `
+      },
+      less: {},
+      stylus: {},
+    },
+  },
 });
