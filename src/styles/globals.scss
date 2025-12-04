@@ -9,13 +9,20 @@ body {
 
   display: flex;
   flex-direction: column;
+  height: 100vh;
   font-family: var(--font-family-base);
   color: var(--color-gray-900);
   background-color: var(--color-gray-200);
-}
 
-main {
-  flex-grow: 1;
+  .page-layouts {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+
+    .content {
+      flex: 1;
+    }
+  }
 }
 
 h1, .h1,
