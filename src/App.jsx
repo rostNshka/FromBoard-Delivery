@@ -9,45 +9,18 @@ import NotFound from '@/pages/NotFound'
 import PageLayouts from '@/layouts/PageLayouts'
 
 const router = createBrowserRouter([
-  { path: '/', element: (
-    <PageLayouts>
-      <Home />
-    </PageLayouts>
-    )},
-  { path: 'calculator', element: (
-      <PageLayouts>
-        <Calculator />
-      </PageLayouts>
-    )},
-  { path: 'guarantees', element: (
-      <>
-        <PageLayouts>
-          <Guarantees />
-        </PageLayouts>
-      </>
-    )},
-  { path: 'reviews', element: (
-      <>
-        <PageLayouts>
-          <Reviews />
-        </PageLayouts>
-      </>
-    )},
-  { path: 'feedback', element: (
-      <>
-        <PageLayouts>
-          <Feedback />
-        </PageLayouts>
-      </>
-    )},
-  { path: '*', element: (
-      <>
-        <PageLayouts>
-          <NotFound />
-        </PageLayouts>
-      </>
-    )},
-
+  {
+    path: '/',
+    element: <PageLayouts />,
+    children: [
+      { path: '/', element: <Home /> },
+      { path: 'calculator', element: <Calculator /> },
+      { path: 'guarantees', element: <Guarantees /> },
+      { path: 'reviews', element: <Reviews /> },
+      { path: 'feedback', element: <Feedback /> },
+      { path: '*', element: <NotFound /> },
+    ]
+  },
 ])
 
 const App = () => {

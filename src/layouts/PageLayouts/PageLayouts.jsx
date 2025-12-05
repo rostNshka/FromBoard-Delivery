@@ -1,16 +1,14 @@
 import Header from '@/layouts/Header'
-import Content from '@/layouts/Content'
 import Footer from '@/layouts/Footer'
+import { Outlet } from 'react-router-dom'
 
-const PageLayouts = (props) => {
-  const { children } = props
-
+const PageLayouts = () => {
   return (
     <div className='page-layouts'>
       <Header />
-      <Content>
-        {children}
-      </Content>
+      <main className='content'>
+        <Outlet />
+      </main>
       <Footer />
     </div>
   )
