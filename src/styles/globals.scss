@@ -7,9 +7,6 @@ html {
 body {
   @include fluid-text(18,14);
 
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
   font-family: var(--font-family-base);
   color: var(--color-gray-900);
   background-color: var(--color-gray-200);
@@ -20,7 +17,7 @@ body {
     height: 100vh;
 
     .content {
-      flex: 1;
+      flex-grow: 1;
     }
   }
 }
