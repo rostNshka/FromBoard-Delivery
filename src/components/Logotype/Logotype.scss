@@ -1,0 +1,30 @@
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: fluid-to-laptop(4, 2);
+
+  &__img {
+    @include laptop {
+      width: 40px;
+      height: 64px;
+    }
+
+    @include mobile {
+      width: 30px;
+      height: 54px;
+    }
+  }
+
+  &__title {
+    font-weight: bold;
+
+    &-dark {
+      color: var(--color-gray-900);
+    }
+
+    &-light {
+      color: var(--color-gray-50);
+    }
+  }
+}
