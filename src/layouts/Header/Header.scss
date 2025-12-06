@@ -1,0 +1,11 @@
+.header {
+  display: flex;
+
+  padding: fluid-to-laptop(25, 16) fluid-to-laptop(192, 90);
+
+  &__main {
+    display: flex;
+    flex-direction: column;
+    row-gap: fluid(24, 16);
+  }
+}

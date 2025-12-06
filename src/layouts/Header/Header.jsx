@@ -1,13 +1,14 @@
-import { NavLink } from 'react-router-dom'
+import Logotype from '@/components/Logotype'
+import './Header.scss'
+import Navigation from '@/components/Navigation'
 
 const Header = () => {
   return (
     <header className="header">
-      <NavLink to={'/'}>Главная</NavLink>
-      <NavLink to={'/calculator'}>Калькулятор</NavLink>
-      <NavLink to={'/guarantees'}>Гарантии</NavLink>
-      <NavLink to={'/reviews'}>Отзывы</NavLink>
-      <NavLink to={'/feedback'}>Задать вопрос</NavLink>
+      <div className="header__main">
+        <Logotype color='dark' />
+        <Navigation color='dark' />
+      </div>
     </header>
   )
 }
