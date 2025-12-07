@@ -1,0 +1,7 @@
+.button {
+  border: none;
+  background-color: var(--color-purple-500);
+  color: var(--color-white);
+  border-radius: var(--border-radius-s);
+  padding: fluid-to-laptop(10,5) fluid-to-laptop(28,16);
+}
