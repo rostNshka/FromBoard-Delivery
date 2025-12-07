@@ -1,0 +1,24 @@
+.addition {
+  display: flex;
+  flex-direction: row;
+  column-gap: fluid-to-laptop(12,8);
+
+  &__descriptions {
+    border-right: 1px solid var(--color-purple-500);
+    padding-right: fluid-to-laptop(12,8);
+    white-space: nowrap;
+  }
+
+  &__main {
+    row-gap: fluid-to-laptop(4,2);
+
+    &-number {
+      font-weight: bold;
+      white-space: nowrap;
+    }
+  }
+
+  .light {
+    color: var(--color-gray-50);
+  }
+}
