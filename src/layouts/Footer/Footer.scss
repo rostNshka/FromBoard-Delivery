@@ -1,0 +1,8 @@
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: fluid-to-laptop(25, 16) fluid-to-laptop(192, 120);
+  background-color: var(--color-gray-900);
+}
