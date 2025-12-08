@@ -1,0 +1,24 @@
+.input__container {
+  display: flex;
+  flex-direction: column;
+
+  label {
+    @include visually-hidden;
+  }
+
+  &-field {
+    border: var(--border);
+    border-radius: var(--border-radius-xs);
+  }
+
+  ::placeholder {
+    font-size: fluid(12,8);
+    color: var(--color-gray-400);
+    padding-left: fluid(8,4);
+  }
+
+  &-error {
+    font-size: fluid(12,8);
+    color: red;
+  }
+}
