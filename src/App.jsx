@@ -1,7 +1,7 @@
 import '@/styles'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Home from './pages/Home/Home'
-import Calculator from '@/pages/Calculator'
+import Calculator from '@/pages/Calculator/Calculator'
 import Guarantees from '@/pages/Guarantees'
 import Reviews from '@/pages/Reviews'
 import Feedback from '@/pages/Feedback'
