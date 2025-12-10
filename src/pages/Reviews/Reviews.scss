@@ -1,0 +1,35 @@
+.reviews {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  height: 100%;
+}
+
+.custom-prev,
+.custom-next {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-gray-50);
+  color: var(--color-purple-500);
+  cursor: pointer;
+  border: 2px solid var(--color-purple-500);
+  border-radius: 50%;
+  font-weight: bold;
+  width: 80px;
+  user-select: none;
+}
+
+.custom-prev:hover,
+.custom-next:hover {
+  background-color: var(--color-purple-500);
+  color: var(--color-gray-50);
+  border: 2px solid var(--color-purple-500);
+}
+
+.custom-prev {
+  rotate: 180deg;
+}
+
