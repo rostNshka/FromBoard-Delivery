@@ -11,7 +11,7 @@ const Navigation = (props) => {
       <NavLink to={ '/calculator' }>Калькулятор</NavLink>
       <NavLink to={ '/guarantees' }>Гарантии</NavLink>
       <NavLink to={ '/reviews' }>Отзывы</NavLink>
-      <NavLink to={ '/feedback' }>Задать вопрос</NavLink>
+      <NavLink to={ '/our-offers' }>Наши предложения</NavLink>
     </nav>
   )
 }
