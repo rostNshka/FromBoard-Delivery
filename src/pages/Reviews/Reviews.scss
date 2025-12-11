@@ -9,6 +9,21 @@
   background-color: var(--color-white);
 }
 
+.slider-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: fluid-to-laptop(140,120);
+
+  &__description {
+    width: fluid-to-laptop(630,120);
+  }
+
+  &__author {
+    font-weight: bold;
+  }
+}
+
 .custom-prev,
 .custom-next {
   display: inline-flex;

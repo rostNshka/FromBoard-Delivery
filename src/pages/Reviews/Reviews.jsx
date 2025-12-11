@@ -19,9 +19,11 @@ const Reviews = () => {
         pagination={{ clickable: true }}
       >
         {reviewsData.map((review) => (
-          <SwiperSlide key={review.id} className="slider-container">
-            <div className="slider__description">{review.description}</div>
-            <span className="slider__author">{review.author}</span>
+          <SwiperSlide key={review.id}>
+            <div className="slider-container">
+              <div className="slider-container__description">{review.description}</div>
+              <span className="slider-container__author">{review.author}</span>
+            </div>
           </SwiperSlide>
         ))}
       </Swiper>
