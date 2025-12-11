@@ -5,7 +5,7 @@ import Calculator from '@/pages/Calculator/Calculator'
 import Guarantees from '@/pages/Guarantees/Guarantees'
 import Reviews from '@/pages/Reviews/Reviews'
 import OurOffers from '@/pages/OurOffers'
-import NotFound from '@/pages/NotFound'
+import NotFound from '@/pages/NotFound/NotFound'
 import PageLayouts from '@/layouts/PageLayouts'
 
 const router = createBrowserRouter([
