@@ -2,15 +2,16 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
-  column-gap: fluid-to-laptop(8,4);
+  justify-content: flex-start;
+  gap: fluid-to-laptop(8,4);
 
   &__info {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    align-items: start;
+    justify-content: flex-start;
     row-gap: fluid-to-laptop(8,4);
+    width: fluid-to-laptop(400,4);
 
     &-title {
       margin: 0;
