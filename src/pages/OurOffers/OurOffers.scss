@@ -1,0 +1,28 @@
+.our-offers {
+  height: 100%;
+  background-color: var(--color-white);
+
+  &__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    padding-top: fluid-to-laptop(64,48);
+
+    &-item {
+      &-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        row-gap: fluid-to-laptop(16,12);
+      }
+
+      :hover {
+        scale: 1.1;
+        transition-duration: var(--transition-duration);
+      }
+    }
+  }
+}
