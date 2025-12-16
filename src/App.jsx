@@ -4,9 +4,10 @@ import Home from './pages/Home/Home'
 import Calculator from '@/pages/Calculator/Calculator'
 import Guarantees from '@/pages/Guarantees/Guarantees'
 import Reviews from '@/pages/Reviews/Reviews'
-import OurOffers from '@/pages/OurOffers'
+import OurOffers from '@/pages/OurOffers/OurOffers'
 import NotFound from '@/pages/NotFound/NotFound'
 import PageLayouts from '@/layouts/PageLayouts'
+import Category from '@/pages/Category/Category'
 
 const router = createBrowserRouter([
   {
@@ -18,6 +19,7 @@ const router = createBrowserRouter([
       { path: 'guarantees', element: <Guarantees /> },
       { path: 'reviews', element: <Reviews /> },
       { path: 'our-offers', element: <OurOffers /> },
+      { path: 'category/:categoryId', element: <Category /> },
       { path: '*', element: <NotFound /> },
     ]
   },
