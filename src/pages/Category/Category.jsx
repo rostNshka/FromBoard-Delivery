@@ -36,11 +36,14 @@ const Category = () => {
 
     getData()
   }, [])
+
   return (
     <div className="category container">
+      {error && <p>{error.message}</p>}
+      {loading && <p className="loading">Загрузка...</p>}
       {currentCategoryArray.map((category, index) => (
         <div className='categor__item' key={index}>
-          <h5>{category.title}</h5>
+          <h5 categor__item-title>{category.title}</h5>
           <div className="category__item-info">
             <img src={category.image} alt="category.title"/>
             <div className="category__item-info__description">
