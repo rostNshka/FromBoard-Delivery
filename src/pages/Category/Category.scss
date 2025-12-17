@@ -1,0 +1,43 @@
+.category {
+  height: 100%;
+  background-color: var(--color-white);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+  gap: fluid-to-laptop(16,8);
+
+  &__item{
+    &-info{
+      display: flex;
+      flex-direction: row;
+      gap: fluid-to-laptop(16,8);
+      align-items: center;
+      justify-content: space-between;
+
+      img {
+        width: 110px;
+        height: 110px;
+      }
+
+      &__description{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &-price{
+          background-color: var(--color-purple-500);
+          padding: fluid-to-laptop(4,2) fluid-to-laptop(8,4);
+          border-radius: fluid-to-laptop(12,8);
+          color: var(--color-white);
+        }
+      }
+    }
+  }
+}
+
+.loading {
+  padding-left: 800px;
+  font-size: fluid-to-laptop(32,24);
+}
