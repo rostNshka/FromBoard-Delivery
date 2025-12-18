@@ -1,5 +1,5 @@
 import './Category.scss'
-import { useParams } from 'react-router-dom'
+import { useParams, useSearchParams } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 
 const Category = () => {
@@ -7,10 +7,18 @@ const Category = () => {
   const [data, setData] = useState([])
   const [error, setError] = useState(null)
   const [loading, setLoading] = useState(false)
+  const [searchParams, setSearchParams] = useSearchParams()
 
-  const currentCategoryArray = data.filter(data => data.category === categoryId)
+  const maxPrice = searchParams.get('maxPrice') ? Number(searchParams.get('maxPrice')) : Infinity
 
-  console.log(currentCategoryArray)
+  const currentCategoryArray = data.filter(
+    data => (data.category === categoryId && data.price <= maxPrice)
+  )
+
+  const filterPrice = (e) => {
+    const value = e.target.value
+    setSearchParams(value ? { maxPrice: value } : {})
+  }
 
   useEffect(() => {
     async function getData() {
@@ -39,10 +47,19 @@ const Category = () => {
 
   return (
     <div className="category container">
+      <div className="filter__max-pice">
+        <label htmlFor="maxPrice">Max price</label>
+        <input
+          type="number"
+          id="maxPrice"
+          onChange={filterPrice}
+          value={searchParams.get("maxPrice") || ""}
+        />
+      </div>
       {error && <p>{error.message}</p>}
       {loading && <p className="loading">Загрузка...</p>}
       {currentCategoryArray.map((category, index) => (
-        <div className='categor__item' key={index}>
+        <div className='category__item' key={index}>
           <h5 categor__item-title>{category.title}</h5>
           <div className="category__item-info">
             <img src={category.image} alt="category.title"/>
