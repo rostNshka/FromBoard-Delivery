@@ -1,13 +1,15 @@
 .category {
   height: 100%;
   background-color: var(--color-white);
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   gap: fluid-to-laptop(16,8);
+  padding-bottom: var(--container-padding-x);
 
   &__item{
+    width: 600px;
     &-info{
       display: flex;
       flex-direction: row;
@@ -40,4 +42,9 @@
 .loading {
   padding-left: 800px;
   font-size: fluid-to-laptop(32,24);
+}
+
+.filter__max-pice {
+  display: flex;
+  flex-direction: column;
 }
