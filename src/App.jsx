@@ -8,6 +8,7 @@ import OurOffers from '@/pages/OurOffers/OurOffers'
 import NotFound from '@/pages/NotFound/NotFound'
 import PageLayouts from '@/layouts/PageLayouts'
 import Category from '@/pages/Category/Category'
+import Thanks from '@/pages/Thanks/Thanks'
 
 const router = createBrowserRouter([
   {
@@ -16,6 +17,7 @@ const router = createBrowserRouter([
     children: [
       { path: '/', element: <Home /> },
       { path: 'calculator', element: <Calculator /> },
+      { path: 'thanks', element: <Thanks /> },
       { path: 'guarantees', element: <Guarantees /> },
       { path: 'reviews', element: <Reviews /> },
       { path: 'our-offers', element: <OurOffers /> },
