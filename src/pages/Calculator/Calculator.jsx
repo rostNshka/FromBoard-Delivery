@@ -3,8 +3,11 @@ import { Formik, Form } from 'formik'
 import { initialValues, schemas } from '@/utils/calculatorData'
 import Input from '@/components/Input'
 import Button from '@/components/Button'
+import { useNavigate } from 'react-router-dom'
 
 const Calculator = () => {
+  const navigate = useNavigate()
+
   return (
     <div className="calculator container">
       <h2 className="calculator__title">Калькулятор доставки</h2>
@@ -12,7 +15,7 @@ const Calculator = () => {
       <Formik
         initialValues={ initialValues }
         validationSchema={ schemas.custom }
-        onSubmit={ () => alert('Спасибо за обращение!') }
+        onSubmit={ () => navigate('/thanks')}
       >
         <Form className="calculator__form">
           <Input
