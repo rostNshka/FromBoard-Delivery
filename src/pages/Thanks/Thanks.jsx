@@ -8,7 +8,7 @@ const Thanks = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       navigate('/', { replace: true })
-    }, 3000)
+    }, 4000)
 
     return () => clearTimeout(timer)
   }, [navigate])
